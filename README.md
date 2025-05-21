@@ -24,15 +24,15 @@ This is backend service for Teacher Management System.
 
 
 | model   | fields    | type   | required |
-| lession | dayOfWeek | Enum   | yes      |
-| lession | subject   | String | yes      |
-| lession | teacher   | String | yes      |
-| lession | Time      | String | yes      |
-| lession | Date      | Date   | yes      |
-| lession | createdBy | String | yes      |
-| lession | creadedOn | Date   | yes      |
-| lession | updatedBy | String | yes      |
-| lession | updatedOn | Date   | yes      |
+| lesson | dayOfWeek | Enum   | yes      |
+| lesson | subject   | String | yes      |
+| lesson | teacher   | String | yes      |
+| lesson | Time      | String | yes      |
+| lesson | Date      | Date   | yes      |
+| lesson | createdBy | String | yes      |
+| lesson | creadedOn | Date   | yes      |
+| lesson | updatedBy | String | yes      |
+| lesson | updatedOn | Date   | yes      |
 
 # Enum
 | enum   | values       |
@@ -88,8 +88,8 @@ This is backend service for Teacher Management System.
 
 
 # Mapping Matrix
-subject to lessionFee mapping:
-| subject   | lessionFee |
+subject to lessonFee mapping:
+| subject   | lessonFee |
 | Math      | 100        |
 | Chinese   | 100        |
 | English   | 100        |
@@ -105,26 +105,28 @@ subject to lessionFee mapping:
 
 # Modules
 
-## Teacher page
-1. Display teachers in a table with all the fields display, show optional fields after requried ones. Order by updateOn desc. 
-2. Provide Register button on top left, click on Register button will insert a new row on top in editing mode, allow user to save with all requried fields specified. 
-3. Provide global search on top left after Register button, allow user to search by required fields ignore case.
-4. Creator and admin have access to update and delete.
+## Teacher
+1. Display teachers in a table with all the fields display, show optional fields after required ones. Show 'gender' and 'subject' fields as dropdown list allows user to pick up value. Order by name. 
+2. Provide 'Register' button on top left, click on Register button will insert a new row on top of table in editing mode, allow user to save teacher with validation applied to required fields. 
+3. Provide global search in the same line after 'Register' button, allow user to search by required fields ignore case.
+4. Add Action field as last field with inline actions 'Edit' and 'Delete' provided in same line. Creator and admin have access to update and delete a record.
 5. Click on Edit button will enable online editing, apply validation to required fields.
 6. Click on Delete with popup alert for user to confirm Delete action.  
 
-## Schedule page
-1. Display lessions in a table with all the fields display, show optional fields after requried ones. 
-2. Provide global search box on top left, allow user to serach by required fields ignore case.
-3. Creator user and admin have access to create, retrieve, update and delete.
-4. TODO...
+## Schedule
+1. Display lessons in a table with all the fields display, show optional fields after required ones. Show 'dayOfWeek', 'subject' and 'teacher' fields as dropdown list allows user to pick up value. Order by 'dayOfWeek'.
+2. Provide 'New' button on top left, click on New button will insert a new row on top of table in editing mode, allow user to save lesson with validation applied to required fields.
+3. Provide global search in the same line after Register button, allow user to search by required fields ignore case.
+4. Add Action field as last field with inline actions "Edit, Delete" provided in same line. Creator and admin have access to update and delete a record.
+5. Click on Edit button will enable online editing, apply validation to required fields.
+6. Click on Delete with popup alert for user to confirm Delete action.
 
-## Lession Fees
-1. Display lession fees in a table.
-2. Provide filters Teacher and Month on top left as dropdown list. 
-3. Provide global search box on top left after filters, allow user to serach by required fields ignore case.
-4. Creator user and admin have access to create, retrieve, update and delete.
-5. TODO...
-
-
+## Lesson Fees
+1. Display lesson fees in a table with all the fields display, show optional fields after required ones.
+2. Provide 'New' button on top left, click on New button will insert a new row on top of table in editing mode, allow user to save lesson fee with validation applied to required fields.
+3. Provide filters 'Teacher' and 'Month' in the same row after 'New' button, allow user to filter data ignore case. 
+4. Provide global search in the same line after 'Month' filter, allow user to search by required fields ignore case. 
+5. Add Action field as last field with inline actions "Edit, Delete" provided in same line. Creator and admin have access to update and delete a record. 
+6. Click on Edit button will enable online editing, apply validation to required fields. 
+7. Click on Delete with popup alert for user to confirm Delete action.
 
