@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: teacher_mgmt
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG 
