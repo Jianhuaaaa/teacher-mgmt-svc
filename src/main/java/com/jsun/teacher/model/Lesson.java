@@ -10,8 +10,8 @@ import jakarta.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
-@Document(collection = "lessions")
-public class Lession {
+@Document(collection = "lessons")
+public class Lesson {
     @Id
     private String id;
 
